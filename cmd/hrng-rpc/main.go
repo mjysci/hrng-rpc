@@ -3,7 +3,6 @@ package main
 import (
 	"crypto/fips140"
 	"flag"
-	"fmt"
 	"log"
 	"os"
 	"strings"
@@ -67,7 +66,7 @@ func main() {
 	}
 
 	if !fips140.Enabled() {
-		fmt.Fprintln(os.Stderr, "Warning: FIPS 140-3 mode is NOT enabled")
+		log.Println("WARNING: FIPS 140-3 mode is NOT enabled")
 	}
 
 	if err := r.Run(":" + port); err != nil {

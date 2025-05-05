@@ -6,6 +6,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -23,8 +24,15 @@ func main() {
 		totalSize = int64(atoi(s))
 	}
 
+	if _, err := os.Stat("/sys/class/misc/hw_random/rng_current"); err == nil {
+		content, err := os.ReadFile("/sys/class/misc/hw_random/rng_current")
+		if err == nil && strings.TrimSpace(string(content)) == "none" {
+			fmt.Fprintln(os.Stderr, "WARNING: Hardware RNG is not available. Random numbers will not be hardware-generated.")
+		}
+	}
+
 	if !fips140.Enabled() {
-		fmt.Fprintln(os.Stderr, "Warning: FIPS 140-3 mode is NOT enabled")
+		fmt.Fprintln(os.Stderr, "WARNING: FIPS 140-3 mode is NOT enabled")
 	}
 
 	const chunkSize = 1024 * 1024
