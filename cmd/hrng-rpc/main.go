@@ -8,9 +8,9 @@ import (
 	"os"
 	"strings"
 
-	"rpi-hrng/internal/config"
-	"rpi-hrng/internal/service"
-	"rpi-hrng/internal/utils"
+	"github.com/mjysci/hrng-rpc/internal/config"
+	"github.com/mjysci/hrng-rpc/internal/service"
+	"github.com/mjysci/hrng-rpc/internal/utils"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/rpc/v2"

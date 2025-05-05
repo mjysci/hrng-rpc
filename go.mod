@@ -1,4 +1,4 @@
-module rpi-hrng
+module github.com/mjysci/hrng-rpc
 
 go 1.24
 

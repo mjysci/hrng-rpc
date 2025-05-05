@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"time"
 
-	"rpi-hrng/internal/config"
-	"rpi-hrng/internal/utils"
+	"github.com/mjysci/hrng-rpc/internal/config"
+	"github.com/mjysci/hrng-rpc/internal/utils"
 )
 
 type GenerateIntegersArgs struct {
