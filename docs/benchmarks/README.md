@@ -15,5 +15,6 @@ dieharder -a -g 201 -f rng.bin
 
 ## Results
 
-[Raspberry-Pi-5](Raspberry-Pi-5.md)
-[Raspberry-Pi-4B](Raspberry-Pi-4B.md)
+[Raspberry Pi 5](Raspberry-Pi-5.md)  
+[Raspberry Pi 4B](Raspberry-Pi-4B.md)  
+[NVIDIA Jetson Nano 2GB Developer Kit](NVIDIA-Jetson-Nano-2GB-Developer-Kit.md)  
