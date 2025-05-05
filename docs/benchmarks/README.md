@@ -19,3 +19,4 @@ dieharder -a -g 201 -f rng.bin
 [Raspberry Pi 4B](Raspberry-Pi-4B.md)  
 [NVIDIA Jetson Nano 2GB Developer Kit](NVIDIA-Jetson-Nano-2GB-Developer-Kit.md)  
 [x86-64](x86-64.md)  
+[i.MX 6ULL](i.MX-6ULL.md)  
