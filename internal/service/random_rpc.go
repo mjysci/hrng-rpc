@@ -512,25 +512,38 @@ func (s *RandomService) GenerateGaussians(r *http.Request, args *GenerateGaussia
 
 	multiplier := math.Pow10(args.SignificantDigits)
 
+	haveSpare := false
+	var spare float64
 	for i := 0; i < args.N; i++ {
-		u1, err := s.generateRandomInt(1, math.MaxInt64)
-		if err != nil {
-			log.Printf("Error generating random int: %v", err)
-			return fmt.Errorf("failed to generate random number from system source: %w", err)
+		var z float64
+		if haveSpare {
+			z = spare
+			haveSpare = false
+		} else {
+			u1, err := s.generateRandomInt(1, math.MaxInt64)
+			if err != nil {
+				log.Printf("Error generating random int: %v", err)
+				return fmt.Errorf("failed to generate random number from system source: %w", err)
+			}
+			u2, err := s.generateRandomInt(1, math.MaxInt64)
+			if err != nil {
+				log.Printf("Error generating random int: %v", err)
+				return fmt.Errorf("failed to generate random number from system source: %w", err)
+			}
+			bitsUsed += 128
+
+			u1f := float64(u1) / float64(math.MaxInt64)
+			u2f := float64(u2) / float64(math.MaxInt64)
+
+			r := math.Sqrt(-2.0 * math.Log(u1f))
+			theta := 2.0 * math.Pi * u2f
+
+			z = r * math.Cos(theta)
+			spare = r * math.Sin(theta)
+			haveSpare = true
 		}
-		u2, err := s.generateRandomInt(1, math.MaxInt64)
-		if err != nil {
-			log.Printf("Error generating random int: %v", err)
-			return fmt.Errorf("failed to generate random number from system source: %w", err)
-		}
-		bitsUsed += 128
 
-		u1f := float64(u1) / float64(math.MaxInt64)
-		u2f := float64(u2) / float64(math.MaxInt64)
-
-		z0 := math.Sqrt(-2.0*math.Log(u1f)) * math.Cos(2.0*math.Pi*u2f)
-
-		gaussian := args.Mean + args.StandardDeviation*z0
+		gaussian := args.Mean + args.StandardDeviation*z
 
 		gaussian = math.Round(gaussian*multiplier) / multiplier
 		data = append(data, gaussian)
