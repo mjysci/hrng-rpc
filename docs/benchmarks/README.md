@@ -3,7 +3,8 @@
 ## Generate 1 GB binary sample
 
 ```sh
-GODEBUG=fips140=on go run cmd/rng-gen/rng-gen.go
+go install github.com/mjysci/hrng-rpc/cmd/rng-gen@latest
+GODEBUG=fips140=on rng-gen
 ```
 
 ## Dieharder
@@ -15,3 +16,4 @@ dieharder -a -g 201 -f rng.bin
 ## Results
 
 [Raspberry-Pi-5](Raspberry-Pi-5.md)
+[Raspberry-Pi-4B](Raspberry-Pi-4B.md)
