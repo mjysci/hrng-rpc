@@ -21,3 +21,4 @@ dieharder -a -g 201 -f rng.bin
 [x86-64](x86-64.md)  
 [i.MX 6ULL](i.MX-6ULL.md)  
 [Raspberry Pi 1B](Raspberry-Pi-1B.md)  
+[STM32MP157](STM32MP157.md)  
