@@ -23,3 +23,4 @@ dieharder -a -g 201 -f rng.bin
 [Raspberry Pi 1B](Raspberry-Pi-1B.md)  
 [STM32MP157](STM32MP157.md)  
 [Luckfox Pico Max](Luckfox-Pico-Max.md)  
+[Allwinner H616](Allwinner-H616.md)  
