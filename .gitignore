@@ -22,3 +22,6 @@ go.work.sum
 
 config.yaml
 rng.bin
+
+cmd/hrng-rpc/hrng-rpc
+cmd/rng-gen/rng-gen
