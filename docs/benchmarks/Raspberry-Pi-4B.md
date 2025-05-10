@@ -1,6 +1,8 @@
 # Raspberry Pi 4B RNG Benchmark
 
 BCM2711
+fe104000.rng
+Linux rpi4b 6.12.20+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.20-1+rpt1~bpo12+1 (2025-03-19) aarch64 GNU/Linux
 
 ## Dieharder
 

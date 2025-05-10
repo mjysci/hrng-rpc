@@ -1,6 +1,8 @@
 # Raspberry Pi 5 RNG Benchmark
 
 BCM2712
+107d208000.rng
+Linux rpi5 6.6.74+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.6.74-1+rpt1 (2025-01-27) aarch64 GNU/Linux
 
 ## Dieharder
 
