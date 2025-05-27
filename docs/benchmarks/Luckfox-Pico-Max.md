@@ -1,6 +1,6 @@
 # Luckfox Pico Max RNG Benchmark
 
-RV1106G3
+RV1106G3  
 
 ## Dieharder
 

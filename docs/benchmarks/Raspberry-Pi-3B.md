@@ -1,8 +1,8 @@
 # Raspberry Pi 3B RNG Benchmark
 
-BCM2837
-3f104000.rng
-Linux rpi3b 6.12.25+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64 GNU/Linux
+BCM2837  
+3f104000.rng  
+Linux rpi3b 6.12.25+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64 GNU/Linux  
 
 ## Dieharder
 

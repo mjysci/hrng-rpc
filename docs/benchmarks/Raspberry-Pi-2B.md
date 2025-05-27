@@ -1,8 +1,8 @@
 # Raspberry Pi 2B RNG Benchmark
 
-BCM2836
-3f104000.rng
-Linux rpi2b 6.12.25+rpt-rpi-v7 #1 SMP Raspbian 1:6.12.25-1+rpt1 (2025-04-30) armv7l GNU/Linux
+BCM2836  
+3f104000.rng  
+Linux rpi2b 6.12.25+rpt-rpi-v7 #1 SMP Raspbian 1:6.12.25-1+rpt1 (2025-04-30) armv7l GNU/Linux  
 
 ## Dieharder
 

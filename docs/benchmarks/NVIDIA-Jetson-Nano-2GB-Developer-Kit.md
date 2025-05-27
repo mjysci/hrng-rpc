@@ -1,7 +1,7 @@
 # NVIDIA Jetson Nano 2GB Developer Kit RNG Benchmark
 
-Tegra X1
-The Tegra X1 has a built-in TRNG, but it's not accessible through the [Jetson Linux API](https://docs.nvidia.com/jetson/l4t-multimedia/group__random__number__group.html). So, this test uses a software-based CSPRNG instead.
+Tegra X1  
+The Tegra X1 has a built-in TRNG, but it's not accessible through the [Jetson Linux API](https://docs.nvidia.com/jetson/l4t-multimedia/group__random__number__group.html). So, this test uses a software-based CSPRNG instead.  
 
 ## Dieharder
 

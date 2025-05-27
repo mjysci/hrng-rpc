@@ -1,6 +1,6 @@
 # Raspberry Pi 1B RNG Benchmark
 
-BCM2835
+BCM2835  
 
 ## Dieharder
 
