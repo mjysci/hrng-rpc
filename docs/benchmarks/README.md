@@ -27,3 +27,4 @@ dieharder -a -g 201 -f rng.bin
 [Raspberry Pi 3B](Raspberry-Pi-3B.md)  
 [Raspberry Pi 2B](Raspberry-Pi-2B.md)  
 [Orange Pi 3B](Orange-Pi-3B.md)  
+[RK3506](RK3506.md)  
